@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assoc Growth Machine</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/imgs/Ativo 1.png">
+    <link href="https://fonts.googleapis.com/css2?family=Vinila:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="chat-wrapper">
+        <div class="chat-container">
+            <div class="chat-header">
+                <h1><i class="fas" ></i> Sync</h1>
+                <p>Bem-vindo(a) ao ChatBot da Assoc! Como posso te ajudar hoje?</p>
+            </div>
+            <div class="chat-body" id="chatBody">
+                <!-- Mensagens serão inseridas aqui -->
+            </div>
+            <div class="suggestions">
+                <p>Escolha uma pergunta rápida:</p>
+                <button class="suggestion-btn" onclick="sendQuickMessage('o que e uma landing page e por que preciso de uma?')">O que é uma Landing Page e por que preciso de uma?</button>
+                <button class="suggestion-btn" onclick="sendQuickMessage('o que e trafego pago e como funciona?')">O que é tráfego pago e como funciona?</button>
+                <button class="suggestion-btn" onclick="sendQuickMessage('como o copywriting pode ajudar meu negocio?')">Como o copywriting pode ajudar meu negócio?</button>
+            </div>
+            <div class="chat-footer">
+                <div class="input-container">
+                    <input type="text" id="userInput" placeholder="Digite sua pergunta..." autocomplete="off">
+                    <button id="sendBtn"><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+  
+</body>
+</html>
