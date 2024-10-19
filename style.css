@@ -242,10 +242,13 @@ body {
     }
     .suggestion-btn {
         font-size: 0.7rem;
-        max-height: 18%;
+        max-height: 23%;
     }
     .chat-header{
         padding: 0px;
+    }
+    .chat-header p{
+        font-size: 0.7rem;
     }
 }
 
