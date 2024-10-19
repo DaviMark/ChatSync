@@ -196,6 +196,21 @@ body {
     box-shadow: 0px 8px 25px #77e580;
 }
 
+.suggestions-toggle {
+    text-align: right;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.suggestions {
+    transition: max-height 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.hidden {
+    max-height: 40px; /* Altura ajustada ao esconder, para descer menos */
+}
+
 /* Animações */
 @keyframes floatIn {
     from {
@@ -228,9 +243,6 @@ body {
     .suggestion-btn {
         font-size: 0.7rem;
         max-height: 18%;
-    }
-    .suggestions{
-        padding: 7px;
     }
     .chat-header{
         padding: 0px;

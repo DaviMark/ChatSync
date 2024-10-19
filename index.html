@@ -34,12 +34,16 @@
             <div class="chat-body" id="chatBody">
                 <!-- Mensagens serão inseridas aqui -->
             </div>
-            <div class="suggestions">
+            <div class="suggestions-toggle">
+                <i class="fas fa-chevron-down" id="toggleIcon" onclick="toggleSuggestions()"></i>
+            </div>
+            <div class="suggestions" id="suggestions">
                 <p>Escolha uma pergunta rápida:</p>
                 <button class="suggestion-btn" onclick="sendQuickMessage('o que e uma landing page e por que preciso de uma?')">O que é uma Landing Page e por que preciso de uma?</button>
                 <button class="suggestion-btn" onclick="sendQuickMessage('o que e trafego pago e como funciona?')">O que é tráfego pago e como funciona?</button>
                 <button class="suggestion-btn" onclick="sendQuickMessage('como o copywriting pode ajudar meu negocio?')">Como o copywriting pode ajudar meu negócio?</button>
             </div>
+            
             <div class="chat-footer">
                 <div class="input-container">
                     <input type="text" id="userInput" placeholder="Digite sua pergunta..." autocomplete="off">

@@ -78,3 +78,17 @@ function sendQuickMessage(text) {
         }
     }, 1000);
 }
+
+function toggleSuggestions() {
+    const suggestions = document.getElementById("suggestions");
+    const toggleIcon = document.getElementById("toggleIcon");
+    
+    suggestions.classList.toggle("hidden");
+
+    // Altera o ícone dependendo do estado (fechado ou aberto)
+    if (suggestions.classList.contains("hidden")) {
+        toggleIcon.classList.replace("fa-chevron-down", "fa-chevron-up");
+    } else {
+        toggleIcon.classList.replace("fa-chevron-up", "fa-chevron-down");
+    }
+}
