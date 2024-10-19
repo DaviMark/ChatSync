@@ -222,6 +222,19 @@ body {
         width: 90%; /* Ajuste a largura para dispositivos móveis */
         height: 80vh; /* Ajuste a altura, se necessário */
     }
+    .suggestions p {
+        font-size: 10px;
+    }
+    .suggestion-btn {
+        font-size: 0.7rem;
+        max-height: 18%;
+    }
+    .suggestions{
+        padding: 7px;
+    }
+    .chat-header{
+        padding: 0px;
+    }
 }
 
 
