@@ -74,7 +74,7 @@ function sendQuickMessage(text) {
         if (faq[normalizedText]) {
             addMessage('bot', faq[normalizedText]);
         } else {
-            addMessage('bot', 'Essa é uma resposta automática.');
+            addMessage('bot', 'Ainda não consigo responder esse tipo de pergunta.');
         }
     }, 1000);
 }
