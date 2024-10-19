@@ -253,25 +253,39 @@ body {
 }
 
 /* Lista de Opções */
-
 .input-container {
     position: relative; /* Necessário para o posicionamento */
+    margin: 20px auto; /* Centraliza o container */
+}
+
+input[type="text"] {
+    width: 100%; /* Mantém a largura do input */
+    padding: 10px 15px; /* Adiciona espaçamento interno */
+    border: 1px solid #77e580; /* Cor da borda */
+    border-radius: 5px; /* Cantos arredondados */
+    font-size: 1rem; /* Tamanho da fonte */
+    transition: border-color 0.3s; /* Animação suave */
+}
+
+input[type="text"]:focus {
+    border-color: #4CAF50; /* Altera a cor da borda ao focar */
+    outline: none; /* Remove contorno padrão */
 }
 
 .suggestions-list {
     position: absolute;
-    bottom: 100%; /* Aparece acima do input */
-    background-color: white;
-    border: 1px solid #77e580;
-    border-radius: 5px;
+    bottom: calc(100% + 5px); /* Aparece um pouco acima do input */
+    background-color: #fff; /* Cor de fundo */
+    border: 1px solid #77e580; /* Cor da borda */
+    border-radius: 5px; /* Cantos arredondados */
     list-style-type: none;
     padding: 0;
     margin: 0;
     max-height: 120px; /* Limitar altura da lista */
     overflow-y: auto; /* Adiciona scroll se necessário */
-    width: 100%;
+    width: calc(100% - 2px); /* Largura da lista com base na borda */
     z-index: 10; /* Certifica-se de que a lista fique acima de outros elementos */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Sombra mais suave */
     transition: opacity 0.3s; /* Animação suave */
     opacity: 0; /* Começa invisível */
 }
@@ -282,13 +296,17 @@ body {
 }
 
 .suggestions-list li {
-    padding: 5px;
+    padding: 10px 15px; /* Aumenta o espaçamento interno */
     cursor: pointer;
     transition: background-color 0.2s, color 0.2s; /* Animação suave */
 }
 
 .suggestions-list li:hover {
-    background-color: #f0f0f0; /* Cor ao passar o mouse */
-    color: #333; /* Cor do texto ao passar o mouse */
+    background-color: #77e580; /* Cor ao passar o mouse */
+    color: white; /* Cor do texto ao passar o mouse */
 }
 
+.suggestions-list li.selected {
+    background-color: #4CAF50; /* Cor para a opção selecionada */
+    color: white; /* Cor do texto da opção selecionada */
+}
