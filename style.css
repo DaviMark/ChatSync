@@ -252,4 +252,43 @@ body {
     }
 }
 
+/* Lista de Opções */
+
+.input-container {
+    position: relative; /* Necessário para o posicionamento */
+}
+
+.suggestions-list {
+    position: absolute;
+    bottom: 100%; /* Aparece acima do input */
+    background-color: white;
+    border: 1px solid #77e580;
+    border-radius: 5px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    max-height: 120px; /* Limitar altura da lista */
+    overflow-y: auto; /* Adiciona scroll se necessário */
+    width: 100%;
+    z-index: 10; /* Certifica-se de que a lista fique acima de outros elementos */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    transition: opacity 0.3s; /* Animação suave */
+    opacity: 0; /* Começa invisível */
+}
+
+.suggestions-list.show {
+    font-size: 0.9rem;
+    opacity: 1; /* Fica visível quando a classe 'show' é adicionada */
+}
+
+.suggestions-list li {
+    padding: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s; /* Animação suave */
+}
+
+.suggestions-list li:hover {
+    background-color: #f0f0f0; /* Cor ao passar o mouse */
+    color: #333; /* Cor do texto ao passar o mouse */
+}
 

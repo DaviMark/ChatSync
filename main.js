@@ -92,3 +92,36 @@ function toggleSuggestions() {
         toggleIcon.classList.replace("fa-chevron-up", "fa-chevron-down");
     }
 }
+
+
+document.getElementById('userInput').addEventListener('input', function() {
+    const inputText = this.value.trim().toLowerCase();
+    const suggestionsList = document.getElementById('suggestionsList');
+    suggestionsList.innerHTML = ''; // Limpa a lista atual
+
+    if (inputText) {
+        const filteredQuestions = Object.keys(faq).filter(question =>
+            question.toLowerCase().includes(inputText)
+        );
+
+        filteredQuestions.forEach(question => {
+            const listItem = document.createElement('li');
+            listItem.textContent = question;
+            listItem.onclick = function() {
+                document.getElementById('userInput').value = question; // Preenche o input com a pergunta selecionada
+                suggestionsList.innerHTML = ''; // Limpa as sugestões após a seleção
+                suggestionsList.classList.remove('show'); // Remove a classe de exibição
+            };
+            suggestionsList.appendChild(listItem);
+        });
+
+        // Mostra ou oculta a lista de sugestões
+        if (filteredQuestions.length > 0) {
+            suggestionsList.classList.add('show'); // Adiciona a classe de exibição
+        } else {
+            suggestionsList.classList.remove('show'); // Remove a classe de exibição
+        }
+    } else {
+        suggestionsList.classList.remove('show'); // Remove a classe de exibição se o input estiver vazio
+    }
+});
